@@ -64,6 +64,29 @@ for ($i=0; $i < count($array) ; $i++) {
 }
 
 
+$summa = 0;
+
+echo "<hr />". getAverage(array('first' => 12 , "sec" => 25, "red" => 1));
+
+function getAverage($array){
+	foreach ($array as $key => $value) {
+		$summa += $value;
+	}
+	return $summa / count($array);
+}
 
 
+
+
+
+$array = (array (12,25,85,41,11,0,6),array (31,85,45,7,11,24,63), array(43,17,62,19,95,16,25));
+
+	for($i = 0; $i < count ($array); $i++) {
+
+		for($j = 0; $j < count($array[$i]); $j++) {
+
+			echo $array[$i][$j]. " | ";
+		}
+		echo "<br />";
+	}
 ?>
